@@ -75,10 +75,8 @@ This is going to take some time.
 
  Create a container instance from the pulled image with the name as **myros**:
 
-For Arch Linux (with wayland)
-
 ```bash
-docker run -it \
+xhost +local:docker && docker run -it \
   --name myros \
  --privileged \
   -e DISPLAY=$DISPLAY \
@@ -92,33 +90,24 @@ docker run -it \
   ghcr.io/srindot/rosgzpx4:latest
 ```
 
-For Ubuntu (wayland or x11) :
-
-```bash
-docker run -it \
-  --name myros \
-  --privileged \
-  -e DISPLAY=$DISPLAY \
-  -e QT_X11_NO_MITSHM=1 \
-  -e PULSE_SERVER=unix:/run/user/$(id -u)/pulse/native \
-  --volume=/run/user/$(id -u)/pulse/native:/run/user/$(id -u)/pulse/native:ro \
-  --device /dev/snd \
-  --group-add audio \
-  --net=host \
-  --volume /tmp/.X11-unix:/tmp/.X11-unix \
-  --volume $HOME/.Xauthority:/root/.Xauthority:ro \
-  --env XDG_RUNTIME_DIR=/run/user/$(id -u) \
-  ghcr.io/srindot/rosgzpx4:latest
-
-```
-
 After this command, the container opens up automatically in /bin/bash.
-
 
 To exit the container :
 
 ```bash
 exit
+```
+
+To stop the container :
+
+```bash
+docker stop myros
+```
+
+To start the contianer:
+
+```bash
+docker start myros
 ```
 
 To re enter a container:
