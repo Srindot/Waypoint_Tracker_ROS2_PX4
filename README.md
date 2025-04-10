@@ -2,7 +2,7 @@
 
 This repository provides a streamlined platform to perform waypoint tracking in quadcopter in ROS2, Gazebo and PX4.
 
-### Software Stack 
+### Software Stack
 
 * ROS2 Humble
 * Gazebo Harmonic
@@ -12,8 +12,9 @@ This repository provides a streamlined platform to perform waypoint tracking in 
 
 ### Trajectory of Quadrotor Navigation
 
+![Alt text](images/sim_results/QGroundControl.png "QGroundControl")
 
-
+![Alt text](images/sim_results/Gazebo.png "Gazebo-Quadcopter")
 
 ## **Installation Guide**
 
@@ -39,14 +40,22 @@ Ensure Docker is installed and configured on your device.
 ### **4. Build the Container**
 
 * Press `Ctrl + Shift + P` to open the  **Command Palette** .
-* Search for **"Reopen locally in a Container"** and select it to start building the container.
+
+  ![Alt text](images/guide/reopen.png)
+* Search for **"Dev Conatiners: Reopen in Container"** and select it to start building the container.
 
 ### **5. Run Tasks Inside the Container**
 
-* Once inside the container, press `Ctrl + Shift + P` again.
+* Once inside the container, press ` Ctrl + Shift + P`  again.
+
+  ![Alt text](images/guide/runtasks.png)t
 * Search for  **"Run Tasks"** , then select and execute the  **following tasks** :
 
 #### **Available Tasks**
+
+* Below are the tasks avaliable
+
+  ![Alt text](images/guide/tasks.png)
 
 1. MicroXRCEAgent : Connection to ROS2 and PX4
 2. PX4 SITL  : To start up PX4 with gazebo gui
@@ -56,4 +65,4 @@ Ensure Docker is installed and configured on your device.
 
 ## **Need Help? Raise an Issue!**
 
-If you encounter any problems or have questions, feel free to **raise an issue**in this repository. We'll be happy to assist you! 🚀
+If you encounter any problems or have questions, feel free to **raise an issue.**
