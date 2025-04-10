@@ -78,7 +78,8 @@ This is going to take some time.
 ```bash
 xhost +local:docker && docker run -it \
   --name myros \
- --privileged \
+  --privileged \
+  --user rosusr \
   -e DISPLAY=$DISPLAY \
   -e PULSE_SERVER=unix:/run/user/$(id -u)/pulse/native \
   --volume=/run/user/$(id -u)/pulse/native:/run/user/$(id -u)/pulse/native \
@@ -88,6 +89,7 @@ xhost +local:docker && docker run -it \
   --volume /tmp/.X11-unix:/tmp/.X11-unix \
   --volume /home/$(whoami)/.Xauthority:/root/.Xauthority:ro \
   ghcr.io/srindot/rosgzpx4:latest
+
 ```
 
 After this command, the container opens up automatically in /bin/bash.
