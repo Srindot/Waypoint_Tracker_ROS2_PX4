@@ -63,14 +63,83 @@ Ensure Docker is installed and configured on your device.
 4. Sensor Combined Listener : To echo gyro readings and acceleration in all three axis
 5. Offboard Control : To arm the vehicle and publish waypoint for quadcopter to track
 
-or these commands can be run on terminal
+### Manual Installation (Recommended if you use Ubuntu Jammy)
+
+First pull the image: Open a terminal and run the following command
+
+```bash
+docker pull ghcr.io/srindot/rosgzpx4
+```
+
+This is going to take some time.
+
+ Create a container instance from the pulled image with the name as **myros**:
+
+For Arch Linux (with wayland)
+
+```bash
+docker run -it \
+  --name myros \
+ --privileged \
+  -e DISPLAY=$DISPLAY \
+  -e PULSE_SERVER=unix:/run/user/$(id -u)/pulse/native \
+  --volume=/run/user/$(id -u)/pulse/native:/run/user/$(id -u)/pulse/native \
+  --device /dev/snd \
+  --group-add audio \
+  --net=host \
+  --volume /tmp/.X11-unix:/tmp/.X11-unix \
+  --volume /home/$(whoami)/.Xauthority:/root/.Xauthority:ro \
+  ghcr.io/srindot/rosgzpx4:latest
+```
+
+For Ubuntu (wayland or x11) :
+
+```bash
+docker run -it \
+  --name myros \
+  --privileged \
+  -e DISPLAY=$DISPLAY \
+  -e QT_X11_NO_MITSHM=1 \
+  -e PULSE_SERVER=unix:/run/user/$(id -u)/pulse/native \
+  --volume=/run/user/$(id -u)/pulse/native:/run/user/$(id -u)/pulse/native:ro \
+  --device /dev/snd \
+  --group-add audio \
+  --net=host \
+  --volume /tmp/.X11-unix:/tmp/.X11-unix \
+  --volume $HOME/.Xauthority:/root/.Xauthority:ro \
+  --env XDG_RUNTIME_DIR=/run/user/$(id -u) \
+  ghcr.io/srindot/rosgzpx4:latest
+
+```
+
+After this command, the container opens up automatically in /bin/bash.
+
+
+To exit the container :
+
+```bash
+exit
+```
+
+To re enter a container:
+
+```bash
+docker exec -it myros /bin/bash
+```
+
+To delete the container instance:
+
+```bash
+docker rm -f myros
+```
 
 1. To launch **MicroXRCEAgent**: Navigate to a new terminal and run the below command to launch it
 
-   ```bash
+```bash
    MicroXRCEAgent udp4 -p 8888
-   ```
-2. To make **PX4_sitl**, open another terminal and navigate to PX4-Autopilot dir
+```
+
+3. To make **PX4_sitl**, open another terminal and navigate to PX4-Autopilot dir
 
 ```bash
    cd ~/PX4-Autopilot
