@@ -1,41 +1,21 @@
-# EC4.402: Introduction to UAV Design - Assignment II (Spring 2025)
+# Waypoint Tracking of Quadcopter in PX4-ROS
 
-## **Objectives**
+This repository provides a streamlined platform to perform waypoint tracking in quadcopter in ROS2, Gazebo and PX4.
 
-The purpose of this assignment is to apply fundamental principles of **quadrotor dynamics and control** to determine the necessary acceleration inputs and perform flight simulations in  **ROS** . The key objectives include:
+### Software Stack 
 
-### **Q1. Acceleration Input Calculation (Python-Based Plotting)**
+* ROS2 Humble
+* Gazebo Harmonic
+* PX4
+* QGroundControl
+* OffboardControl
 
-- Compute the required acceleration inputs (axd, ayd, azd) for a quadrotor to navigate between the given waypoints using Python.
+### Trajectory of Quadrotor Navigation
 
-- Consider a mass of 2 kg and assume a yaw angle ψ = 0°.
 
-- Utilize inner-loop attitude control, ensuring perfect tracking of the desired roll (φd) and pitch (θd).
 
-- Generate Python-based plots for:
 
-- Acceleration (ax, ay, az) vs. time
-
-- Desired roll (φd), pitch (θd), and thrust (Td)
-
-- Velocity and position evolution in all three axes
-
-### **Q2. ROS-Based UAV Simulation (PX4, Gazebo, Harmonic, ROS2 Humble, QGroundControl)**
-
-* Implement a **ROS2 Humble-based simulation** to demonstrate quadrotor waypoint navigation using:
-  * **PX4 Autopilot** for flight control.
-  * **Gazebo Harmonic** for high-fidelity UAV simulation.
-  * **QGroundControl (QGC)** for mission planning and monitoring.
-* Simulate the quadrotor's motion toward each waypoint while logging  **position, velocity, and acceleration** .
-* Generate **Python-based plots** to visualize flight dynamics, ensuring consistency with **Q.1 results**
-
-### 3D Trajectory Plot of Quadrotor Navigation
-
-This plot represents the **quadrotor's movement in 3D space**as it navigates through predefined waypoints. The simulation is based on the  **North-East-Down (NED) coordinate system** , illustrating changes in position over time.**
-
-![3D Trajectory Plot](results_ROS_test/ROS_3D_Trajectory_Mission_A.png)
-
-**Installation Guide**
+## **Installation Guide**
 
 ### **1. Clone the Repository**
 
@@ -68,13 +48,11 @@ Ensure Docker is installed and configured on your device.
 
 #### **Available Tasks**
 
-1. MicroXRCEAgent
-2. PX4 SITL
-3. QGroundControl
-4. Sensor Combined Listener
-5. Offboard Control
-6. ROS Bag Recording for Gyro Reading
-7. ROS Bag Recording for Local Vehicle Accelerations
+1. MicroXRCEAgent : Connection to ROS2 and PX4
+2. PX4 SITL  : To start up PX4 with gazebo gui
+3. QGroundControl : To launch QGroundControl
+4. Sensor Combined Listener : To echo gyro readings and acceleration in all three axis
+5. Offboard Control : To arm the vehicle and publish waypoint for quadcopter to track
 
 ## **Need Help? Raise an Issue!**
 
