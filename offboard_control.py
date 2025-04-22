@@ -10,6 +10,7 @@ class OffboardControl(Node):
     """Node for controlling a vehicle in offboard mode."""
 
     def __init__(self) -> None:
+        
         super().__init__('offboard_control')
 
         # Configure QoS profile
@@ -38,7 +39,7 @@ class OffboardControl(Node):
 
         # Set Waypoints
         # --------------------------------------------------------------------------------------------------------------------
-        self.waypoints = [[0.0, 0.0, -5.0], [30.0, 40.0, -5.0], [20.0, -30.0, -5.0], [0.0, 0.0, -5.0]]
+        self.waypoints = [[0.0, 0.0, -5.0], [30.0, 100.0, -5.0], [20.0, -30.0, -5.0], [0.0, 0.0, -5.0]]
         # --------------------------------------------------------------------------------------------------------------------
         
         # Initialize variables
