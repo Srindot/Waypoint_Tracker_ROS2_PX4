@@ -63,7 +63,7 @@ Ensure Docker is installed and configured on your device.
 4. Sensor Combined Listener : To echo gyro readings and acceleration in all three axis
 5. Offboard Control : To arm the vehicle and publish waypoint for quadcopter to track
 
-### Manual Installation (Recommended if you use Ubuntu Jammy)
+### Manual Installation (If you choose to run on terminal)
 
 First pull the image: Open a terminal and run the following command
 
