@@ -28,9 +28,12 @@
     },
     "containerEnv": {
         "DISPLAY": ":0",
-        "QT_QPA_PLATFORM": "xcb"
+        "QT_QPA_PLATFORM": "xcb",
+        "NVIDIA_DRIVER_CAPABILITIES": "all",
+        "NVIDIA_VISIBLE_DEVICES": "all"
     },
     "runArgs": [
+        "--gpus=all", 
         "--privileged",
         "-e", "DISPLAY=${localEnv:DISPLAY}",
         "-e", "QT_QPA_PLATFORM=xcb",
