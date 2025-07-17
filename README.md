@@ -21,9 +21,8 @@ This repository provides a streamlined platform to perform waypoint tracking in 
 
 First, clone the project using Git:
 
-bash
 
-```
+```bash
 git clone https://github.com/Srindot/assignment2_Introduction_To_UAV_Design.git
 ```
 
