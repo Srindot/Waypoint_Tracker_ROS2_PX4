@@ -37,7 +37,11 @@ Ensure Docker is installed and configured on your device.
 * Launch  **Visual Studio Code (VS Code)** .
 * Open the cloned project folder.
 
-### **4. Build the Container**
+### **4. Packages Dependencies**
+
+* Install xorg-xhost
+
+### **5. Build the Container**
 
 * Press `Ctrl + Shift + P` to open the  **Command Palette** .
 
