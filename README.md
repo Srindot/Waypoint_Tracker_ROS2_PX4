@@ -54,8 +54,6 @@ Ensure Docker is installed and configured on your device.
 
 > **If your host system doesn't have a Nvidia Card, remove the instance of gpus in [devcontainer](.devcontainer/devcontainer.json) and you can ignore the below instruction to download Nvidia Container Toolkit. (Follow the comments in the [devcontainer](.devcontainer/devcontainer.json) file)**
 
-
-
 For Arch:
  ```bash
  sudo pacman -S nvidia-container-toolkit
