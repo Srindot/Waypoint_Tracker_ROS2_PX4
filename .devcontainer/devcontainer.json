@@ -29,11 +29,11 @@
     "containerEnv": {
         "DISPLAY": ":0",
         "QT_QPA_PLATFORM": "xcb",
-        "NVIDIA_DRIVER_CAPABILITIES": "all",
-        "NVIDIA_VISIBLE_DEVICES": "all"
+        "NVIDIA_DRIVER_CAPABILITIES": "all", // Remove this Lines If you don't have a Nvida Card
+        "NVIDIA_VISIBLE_DEVICES": "all"      // Remove this Lines If you don't have a Nvida Card
     },
     "runArgs": [
-        "--gpus=all", 
+        "--gpus=all", // Remove this Lines If you don't have a Nvida Card
         "--privileged",
         "-e", "DISPLAY=${localEnv:DISPLAY}",
         "-e", "QT_QPA_PLATFORM=xcb",
