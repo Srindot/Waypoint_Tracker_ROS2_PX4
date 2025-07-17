@@ -85,15 +85,15 @@ After this restart the docker daemon:
 sudo systemctl restart docker
 ```
 
-
-
-
 ### **5. Build the Container**
 
 * Press `Ctrl + Shift + P` to open the  **Command Palette** .
 
   ![Alt text](images/guide/reopen.png)
 * Search for **"Dev Conatiners: Reopen in Container"** and select it to start building the container.
+> This will take a long time, it will pull the image from the github container registry and to open it.
+
+* After this, make sure to choose the terminal profile in vscode to be `bash`. You can do this in the command pallete in github, search for terminal profile and select `bash`.
 
 ### **6. Run Tasks Inside the Container**
 
