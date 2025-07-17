@@ -42,6 +42,7 @@ Ensure Docker is installed and configured on your device.
 * Install xorg-xhost
 * Install Nvidia Container toolkit
 
+
 ### **5. Build the Container**
 
 * Press `Ctrl + Shift + P` to open the  **Command Palette** .
@@ -49,7 +50,7 @@ Ensure Docker is installed and configured on your device.
   ![Alt text](images/guide/reopen.png)
 * Search for **"Dev Conatiners: Reopen in Container"** and select it to start building the container.
 
-### **5. Run Tasks Inside the Container**
+### **6. Run Tasks Inside the Container**
 
 * Once inside the container, press ` Ctrl + Shift + P`  again.
 
