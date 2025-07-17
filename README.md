@@ -39,22 +39,24 @@ Ensure Docker is installed and configured on your device.
 
 ### **4. Packages Dependencies**
 
-* Install xorg-xhost
+#### ***1. Install xorg-xhost***
 
-For arch:
+***For arch:***
 ```bash
  sudo pacman -S xorg-xhost
  ```
 
- For Ubuntu:
- ```
+***For Ubuntu:***
+ ```bash
  sudo apt update && sudo apt install x11-xserver-utils
 ```
 
-If the host device doesn't have a Nvidia Card, remove the instance of gpu in [devcontianer](.devcontainer/devcontainer.json) and you can ignore the below instruction
 
-If you have a Nvidia Card
-* Install Nvidia Container toolkit
+### ****2.Install Nvidia Container toolkitL:***
+
+> **If your host system doesn't have a Nvidia Card, remove the instance of gpus in [devcontianer](.devcontainer/devcontainer.json) and you can ignore the below instruction to download Nvidia Container Toolkit. (Follow the comments in the [devcontianer](.devcontainer/devcontainer.json) file)**
+
+
 
 For Arch:
  ```bash
