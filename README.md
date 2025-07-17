@@ -51,7 +51,7 @@ Ensure Docker is installed and configured on your device.
 ```
 
 
-### ****2.Install Nvidia Container toolkitL:***
+### ***2.Install Nvidia Container toolkitL:***
 
 > **If your host system doesn't have a Nvidia Card, remove the instance of gpus in [devcontianer](.devcontainer/devcontainer.json) and you can ignore the below instruction to download Nvidia Container Toolkit. (Follow the comments in the [devcontianer](.devcontainer/devcontainer.json) file)**
 
