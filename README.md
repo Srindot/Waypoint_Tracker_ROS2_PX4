@@ -40,8 +40,20 @@ Ensure Docker is installed and configured on your device.
 ### **4. Packages Dependencies**
 
 * Install xorg-xhost
-* Install Nvidia Container toolkit
 
+For arch, 
+```bash
+ sudo pacman -S xorg-xhost
+ ```
+
+
+If you have a Nvidia Card
+* Install Nvidia Container toolkit
+ ```bash
+ sudo pacman -S nvidia-container-toolkit
+```
+
+If the host device doesn't have a Nvidia Card, removed the instance of gpu in [devcontianer](.devcontainer/devcontainer.json)
 
 ### **5. Build the Container**
 
