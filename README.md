@@ -8,7 +8,6 @@ This repository provides a streamlined platform to perform waypoint tracking in 
 * Gazebo Harmonic
 * PX4
 * QGroundControl
-* OffboardControl
 
 ### Trajectory of Quadrotor Navigation
 
