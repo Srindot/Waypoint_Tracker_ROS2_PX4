@@ -40,6 +40,7 @@ Ensure Docker is installed and configured on your device.
 ### **4. Packages Dependencies**
 
 * Install xorg-xhost
+* Install Nvidia Container toolkit
 
 ### **5. Build the Container**
 
