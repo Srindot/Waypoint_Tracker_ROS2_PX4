@@ -41,19 +41,50 @@ Ensure Docker is installed and configured on your device.
 
 * Install xorg-xhost
 
-For arch, 
+For arch:
 ```bash
  sudo pacman -S xorg-xhost
  ```
 
+ For Ubuntu:
+ ```
+ sudo apt update && sudo apt install x11-xserver-utils
+```
+
+If the host device doesn't have a Nvidia Card, remove the instance of gpu in [devcontianer](.devcontainer/devcontainer.json) and you can ignore the below instruction
 
 If you have a Nvidia Card
 * Install Nvidia Container toolkit
+
+For Arch:
  ```bash
  sudo pacman -S nvidia-container-toolkit
 ```
+and restart the docker daemon 
+```bash 
+sudo systemctl restart docker
+```
 
-If the host device doesn't have a Nvidia Card, removed the instance of gpu in [devcontianer](.devcontainer/devcontainer.json)
+For Ubuntu:
+Set up the Repository
+```bash 
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+```
+Then install the nvidia-contianer-toolkit
+```bash
+sudo apt-get update
+sudo apt-get install -y nvidia-container-toolkit
+```
+After this restart the docker daemon:
+```bash
+sudo systemctl restart docker
+```
+
+
+
 
 ### **5. Build the Container**
 
