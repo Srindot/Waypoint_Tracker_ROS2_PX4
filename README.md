@@ -19,7 +19,7 @@ This repository provides a streamlined platform to perform waypoint tracking in 
 
 ### **1. Clone the Repository**
 
-First, clone the project using Git:
+First, clone the project using Git in your linux system(Ubuntu, Arch and etc):
 
 
 ```bash
